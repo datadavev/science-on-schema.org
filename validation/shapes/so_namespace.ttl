@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix d1: <http://ns.esipfed.org/schema/SO/1.0/SHACL/> .
+
+# Tests for presence of incorrect namespace
+# This test can only check for presence of error conditions specifically
+# expressed in the checks. Hence it is necessary to add more shapes for
+# different classes to be checked.
+d1:DatasetBad1Shape
+    a sh:NodeShape ;
+    sh:targetClass <https://schema.orgDataset/> ;
+    sh:message "Expecting SO namespace of <https://schema.org/> not <https://schema.org>" ;
+    sh:not [
+        sh:path rdf:type ;
+        sh:minCount 1;
+    ].
+d1:DatasetBad2Shape
+    a sh:NodeShape ;
+    sh:targetClass <http://schema.org/Dataset> ;
+    sh:message "Expecting SO namespace of <https://schema.org/> not <http://schema.org/>" ;
+    sh:not [
+        sh:path rdf:type ;
+        sh:minCount 1;
+    ].
+d1:DatasetBad3Shape
+    a sh:NodeShape ;
+    sh:targetClass <http://schema.orgDataset/> ;
+    sh:message "Expecting SO namespace of <https://schema.org/> not <http://schema.org>" ;
+    sh:not [
+        sh:path rdf:type ;
+        sh:minCount 1;
+    ].
