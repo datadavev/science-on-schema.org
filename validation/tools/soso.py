@@ -20,7 +20,7 @@ LOG_LEVELS = {
 }
 LOG_DATE_FORMAT = "%Y-%m-%dT%H:%M:%S"
 LOG_FORMAT = "%(asctime)s %(name)s:%(levelname)s: %(message)s"
-SCHEMA_DEST_PATH = os.path.join(os.path.dirname(__file__), "../shapes/")
+SCHEMA_DEST_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "../data/"))
 
 
 def getLogger():
@@ -30,21 +30,6 @@ def getLogger():
 def fileChanged(file_name, t0=0):
     t1 = os.stat(file_name).st_mtime
     return t1 > t0, t1
-
-
-def getShaclShapes(shacl_name):
-    """
-    Get list of SHACL graphs referenced by name or file name
-    Args:
-        shacl_name:
-
-    Returns:
-        list of graph
-    """
-    L = getLogger()
-    if os.path.exists(shacl_name):
-        L.info("Loading SHACL from file: %s", shacl_name)
-    # TODO: add names to config
 
 
 @click.group()
@@ -66,7 +51,7 @@ def main(verbosity):
         L.warning("%s is not a log level, set to INFO", verbosity)
 
 
-#== download operation ==
+# == download operation ==
 @main.command()
 @click.option(
     "--dest_path",
@@ -119,15 +104,30 @@ def download(dest_path, dest_name):
     show_default=True,
     is_flag=True,
 )
-def verify(data_file, data_format, shacl_file, schema_org, watch):
+@click.option(
+    "--out-format", "-o", help="Output format", default="text", show_default=True,
+)
+def verify(data_file, data_format, shacl_file, schema_org, watch, out_format):
     """
     Verify a data shape against one or more shacl shapes.
+    Args:
+        data_file: Path to data shape file
+        data_format: format of datashape, see rdflib
+        shacl_file: Path to shacl file in turtle
+        schema_org: Path to schema.org vocabulary in turtle
+        watch: (boolean) Watch data or shape file for changes and recompute
+        out_format: format for output, "text" or rdflib format
 
+    Returns:
+        integer status
     """
     L = getLogger()
     if not os.path.exists(data_file):
         L.error("Data shape not found: %s", data_file)
-        return
+        return 1
+    if not os.path.exists(shacl_file):
+        L.error("SHACL shape not found: %s", shacl_file)
+        return 1
     data_graph = None
     data_mtime = 0
     shacl_graph = None
@@ -140,13 +140,14 @@ def verify(data_file, data_format, shacl_file, schema_org, watch):
     else:
         L.info("Loading schema.org graph: %s", schema_org)
         schema_graph = sosov.loadGraph(schema_org)
+    out_format = out_format.lower()
     more_work = True
     processed = False
     if watch:
         L.info("Watching Data and SHACL sources for changes. Ctrl-C to exit.")
     while more_work:
         try:
-            # check files for modification
+            # check files for modification and load if changed
             data_changed, data_mtime = fileChanged(data_file, data_mtime)
             if data_changed:
                 L.info("Loading data source: %s", data_file)
@@ -167,13 +168,22 @@ def verify(data_file, data_format, shacl_file, schema_org, watch):
                 except Exception as e:
                     L.error("Could not load SHACL shape: %s", e)
 
-            # load the data and shape graphs
+            # Run the verification if new content is available
             if not processed and data_graph is not None and shacl_graph is not None:
-                conforms, result_graph, result_text = sosov.verify.validateSHACL(
-                    data_graph, shacl_graph=shacl_graph, ont_graph=schema_graph
-                )
-                print("====")
-                print(result_text)
+                try:
+                    L.info("Evaluating SHACL constraints...")
+                    conforms, result_graph, result_text = sosov.verify.validateSHACL(
+                        data_graph, shacl_graph=shacl_graph, ont_graph=schema_graph
+                    )
+                    if out_format == "text":
+                        print("====")
+                        print(result_text)
+                    else:
+                        print(
+                            result_graph.serialize(format=out_format, indent=2).decode()
+                        )
+                except Exception as e:
+                    L.error(e)
                 processed = True
             more_work = watch
             time.sleep(0.618)
@@ -184,6 +194,7 @@ def verify(data_file, data_format, shacl_file, schema_org, watch):
             data_graph = None
             shacl_graph = None
             schema_graph = None
+        return 0
 
 
 if __name__ == "__main__":
