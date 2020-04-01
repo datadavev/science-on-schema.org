@@ -1,12 +1,14 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix d1: <http://ns.esipfed.org/schema/SO/1.0/SHACL/> .
+@prefix soso: <http://ns.esipfed.org/schema/SO/1.0/SHACL/> .
 
 # Tests for presence of incorrect namespace
 # This test can only check for presence of error conditions specifically
 # expressed in the checks. Hence it is necessary to add more shapes for
 # different classes to be checked.
-d1:DatasetBad1Shape
+
+
+soso:DatasetBad1Shape
     a sh:NodeShape ;
     sh:targetClass <https://schema.orgDataset/> ;
     sh:message "Expecting SO namespace of <https://schema.org/> not <https://schema.org>" ;
@@ -14,7 +16,7 @@ d1:DatasetBad1Shape
         sh:path rdf:type ;
         sh:minCount 1;
     ].
-d1:DatasetBad2Shape
+soso:DatasetBad2Shape
     a sh:NodeShape ;
     sh:targetClass <http://schema.org/Dataset> ;
     sh:message "Expecting SO namespace of <https://schema.org/> not <http://schema.org/>" ;
@@ -22,7 +24,7 @@ d1:DatasetBad2Shape
         sh:path rdf:type ;
         sh:minCount 1;
     ].
-d1:DatasetBad3Shape
+soso:DatasetBad3Shape
     a sh:NodeShape ;
     sh:targetClass <http://schema.orgDataset/> ;
     sh:message "Expecting SO namespace of <https://schema.org/> not <http://schema.org>" ;
@@ -30,3 +32,26 @@ d1:DatasetBad3Shape
         sh:path rdf:type ;
         sh:minCount 1;
     ].
+
+soso:DatasetBadXShape
+    a sh:NodeShape ;
+    sh:targetClass <http://schema.org/Dataset> ;
+    sh:message "This message is never displayed" ;
+    sh:property soso:testProperty,
+        [
+            sh:description "test descr"@en ;
+            sh:message "test test"@en ;
+            sh:name "test"@en ;
+            sh:path rdf:type ;
+            sh:maxCount 0 ;
+        ];
+    .
+soso:testProperty
+    a sh:PropertyShape ;
+    sh:description "test descr 2"@en ;
+    sh:message "test test 2"@en ;
+    sh:name "test 2"@en ;
+    sh:path rdf:type ;
+    sh:maxCount 0 ;
+    .    
+
