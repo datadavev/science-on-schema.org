@@ -1,5 +1,23 @@
 import pyshacl
 
+
+def listNodeShapes(g):
+    """
+    Return a list of the SHACL NodeShapes in g
+
+    Args:
+        g: graph
+
+    Returns:
+
+    """
+    for s,p,o in g.triples(None, None, "<http://www.w3.org/ns/shacl#NodeShape>"):
+        print(s)
+        print(p)
+        print(o)
+        print("===")
+
+
 def validateSHACL(data_graph, shacl_graph=None, ont_graph=None):
     """
     Validate data against a SHACL shape using common options.
