@@ -194,7 +194,7 @@ def verify(data_file, data_format, shacl_file, schema_org, watch, out_format):
             data_graph = None
             shacl_graph = None
             schema_graph = None
-        return 0
+    return 0
 
 
 if __name__ == "__main__":
