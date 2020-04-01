@@ -33,25 +33,4 @@ soso:DatasetBad3Shape
         sh:minCount 1;
     ].
 
-soso:DatasetBadXShape
-    a sh:NodeShape ;
-    sh:targetClass <http://schema.org/Dataset> ;
-    sh:message "This message is never displayed" ;
-    sh:property soso:testProperty,
-        [
-            sh:description "test descr"@en ;
-            sh:message "test test"@en ;
-            sh:name "test"@en ;
-            sh:path rdf:type ;
-            sh:maxCount 0 ;
-        ];
-    .
-soso:testProperty
-    a sh:PropertyShape ;
-    sh:description "test descr 2"@en ;
-    sh:message "test test 2"@en ;
-    sh:name "test 2"@en ;
-    sh:path rdf:type ;
-    sh:maxCount 0 ;
-    .    
 
