@@ -1,0 +1,10 @@
+{
+    "@context":{ 
+        "@vocab": "http://schema.org/",
+        "sh":"http://www.w3.org/ns/shacl#"
+    },
+    "@id": "test-00",
+    "@type": "Dataset",
+    "description":"Bad namespace, using http instead of https",
+    "sh:conforms":false
+}
