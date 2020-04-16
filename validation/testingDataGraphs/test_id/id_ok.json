@@ -1,24 +1,7 @@
 {
   "@context": {
-    "@vocab": "https://schema.org/",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "sosov":"http://science-on-schema.org/validation/"
+    "@vocab": "https://schema.org/"
   },
-  "@graph": [
-    {
-      "@id": "./test/id_ok",
-      "@type": "Dataset",
-      "sosov:test": {
-        "sosov:conforms": true,
-        "sosov:message": "Test for @id on SO:Dataset"
-      }
-    },
-    {
-      "@type": "Dataset",
-      "sosov:test": {
-        "sosov:conforms": false,
-        "sosov:message": "SO:Dataset missing @id"
-      }
-    }
-  ]
+  "@id": "./test/id_ok",
+  "@type": "Dataset"
 }

@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "url": { "@type": "URL" }
+  },
+  "@type": "Dataset",
+  "@id": "test-identifier",
+  "identifier": {
+    "@id": "identifier",
+    "@type": "PropertyValue",
+    "propertyID": "https://registry.identifiers.org/registry/doi",
+    "value": "https://example.com/data/1",
+    "url": "https://example.com/data/1"
+  }
+}

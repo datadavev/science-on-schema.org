@@ -1,12 +1,16 @@
 {
    "@context":{
-      "@vocab":"http://schema.org/",
+      "@vocab":"https://schema.org/",
       "gdx":"https://geodex.org/voc/",
       "datacite":"http://purl.org/spar/datacite/",
       "earthcollab":"https://library.ucar.edu/earthcollab/schema#",
       "geolink":"http://schema.geolink.org/1.0/base/main#",
       "geolink-vocab":"http://schema.geolink.org/1.0/voc/local#",
-      "vivo":"http://vivoweb.org/ontology/core#"
+      "vivo":"http://vivoweb.org/ontology/core#",
+      "url": {
+         "@id": "url",
+         "@type": "URL"
+      }
    },
    "@id":"https://www.bco-dmo.org/dataset/472032",
    "identifier":[
