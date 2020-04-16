@@ -1,0 +1,85 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix soso: <http://science-on-schema.org/1.1.0/validation/shacl#> .
+@prefix SO: <https://schema.org/> .
+@prefix datacite: <http://purl.org/spar/datacite/> .
+
+
+soso:rdfPrefix
+  sh:declare [
+    sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+    sh:prefix "rdf" ;
+  ] .
+
+soso:rdfsPrefix
+    sh:declare [
+        sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+        sh:prefix "rdfs" ;
+    ] .
+
+soso:schemaPrefix
+  sh:declare [
+    sh:namespace "https://schema.org/"^^xsd:anyURI ;
+    sh:prefix "SO" ;
+  ] .
+
+soso:ExplicitIdentifierShape
+    a sh:NodeShape ;
+    rdfs:comment "Evaluation of structured Dataset identifiers"@en ;
+    sh:description "See https://github.com/ESIPFed/science-on-schema.org/blob/1.1.0/guides/Dataset.md#identifier" ;
+    sh:target [
+        a sh:SPARQLTarget ;
+        sh:prefixes soso:rdfPrefix, soso:schemaPrefix ;
+        sh:select """
+            SELECT ?this
+            WHERE {
+                ?DS rdf:type SO:Dataset .
+                ?DS SO:identifier ?this .
+                ?this rdf:type/rdfs:subClassOf* SO:PropertyValue .
+            }
+        """
+    ] ;
+    sh:property soso:propertyIDidShape,
+                soso:valueidShape,
+                soso:urlidShape ;
+    .
+
+soso:propertyIDidShape
+    a sh:PropertyShape ;
+    sh:path SO:propertyID ;
+    sh:pattern "^http[s]?://registry.identifiers.org(.*)" ;
+    sh:minCount 1 ;
+    sh:severity sh:Warning ;
+    sh:message "The type of identifier should be specified by reference to the identifiers.org vocabulary"@en ;
+    sh:description "https://github.com/ESIPFed/science-on-schema.org/blob/1.1.0/guides/Dataset.md#identifier" ;
+    .
+
+soso:valueidShape
+    a sh:PropertyShape ;
+    sh:path SO:value ;
+    sh:minCount 1 ;
+    sh:severity sh:Violation ;
+    sh:message "An identifier value must be provided."@en ;
+    sh:description "https://github.com/ESIPFed/science-on-schema.org/blob/1.1.0/guides/Dataset.md#identifier" ;
+    .
+
+soso:urlidShape
+    a sh:PropertyShape ;
+    sh:path SO:url ;
+    sh:datatype SO:URL ;
+    sh:minCount 1 ;
+    sh:severity sh:Warning ;
+    sh:message "A url of type URL that resolves the identifier should be provided."@en ;
+    sh:description "https://github.com/ESIPFed/science-on-schema.org/blob/1.1.0/guides/Dataset.md#identifier" ;
+    .
+
+soso:nameidShape
+    a sh:PropertyShape ;
+    sh:path SO:name ;
+    sh:minCount 1 ;
+    sh:severity sh:Info ;
+    sh:message "A name for the identifier can help disambiguate the type of identifier being used"@en ;
+    sh:description "https://github.com/ESIPFed/science-on-schema.org/blob/1.1.0/guides/Dataset.md#identifier" ;
+    .
