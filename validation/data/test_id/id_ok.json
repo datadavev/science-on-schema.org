@@ -1,0 +1,12 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@graph": [
+    {
+      "@id": "#id_ok",
+      "@type": "Dataset",
+      "description": "Minimally valid Dataset with @id"
+    }
+  ]
+}

@@ -1,7 +1,0 @@
-{
-  "@context": {
-    "@vocab": "https://schema.org/"
-  },
-  "@id": "./test/id_ok",
-  "@type": "Dataset"
-}

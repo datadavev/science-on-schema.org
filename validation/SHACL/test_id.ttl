@@ -1,11 +1,11 @@
-@prefix ex: <http://www.earthcube.org/schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix SO: <https://schema.org/> .
+@prefix soso: <http://science-on-schema.org/1.1.0/validation/shacl#> .
 
-ex:IDShape
+<#IDShape>
     a sh:NodeShape ;
     sh:nodeKind sh:IRI ;
-    sh:message "Expect to see an ID for this resource"@en ;
+    sh:message "Expect to see an @id for this resource"@en ;
     sh:targetClass SO:Dataset ;
     .
 

@@ -1,0 +1,44 @@
+{
+  "@context": {
+    "@vocab": "http://science-on-schema.org/1.1.0/validation/shacl#",
+    "soso": "http://science-on-schema.org/1.1.0/validation/shacl#"
+  },
+  "@graph": [
+    {
+      "@id": "#id_ok-test_id",
+      "@type": "TestCase",
+      "data": {"@id":"../data/test_id/id_ok.json#id_ok"},
+      "shacl": {"@id": "../SHACL/test_id.ttl"},
+      "apply": true,
+      "fails": [
+      ]
+    },
+    {
+      "@id": "#id_fail-test_id",
+      "@type": "TestCase",
+      "data": {"@id":"../data/test_id/id_fail.json"},
+      "shacl": {"@id": "../SHACL/test_id.ttl"},
+      "apply": true,
+      "fails": [
+          {"@id": "../SHACL/test_id.ttl#IDShape"}
+      ]
+    },
+    {
+      "@id": "#id_fail-soso_common",
+      "@type": "TestCase",
+      "data": {"@id":"../data/test_id/id_ok.json#id_ok"},
+      "shacl": {"@id": "../SHACL/soso_common.ttl"},
+      "apply": true,
+      "fails": [
+          {"@id": "nameDatasetProperty"},
+          {"@id": "soso:urlDatasetProperty"},
+          {"@id": "soso:descriptionDatasetProperty"},
+          {"@id": "soso:versionDatasetProperty"},
+          {"@id": "soso:sameAsDatasetProperty"},
+          {"@id": "soso:isAccessibleForFreeDatasetProperty"},
+          {"@id": "soso:keywordsDatasetProperty"},
+          {"@id": "soso:identifierDatasetProperty"}
+      ]
+    }
+  ]
+}

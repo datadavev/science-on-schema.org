@@ -1,0 +1,8 @@
+# Test cases for SHACL examples
+tests:
+  - shacl: "SHACL/soso_common.ttl"
+    data:
+      - source: "data/id_ok.json"
+        expected: true
+      - source: "data/id_bad1.json"
+        expected: false
