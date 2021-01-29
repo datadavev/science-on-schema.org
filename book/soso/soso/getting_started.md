@@ -55,7 +55,7 @@ of January 24 2017 at https://ai.googleblog.com/2017/01/facilitating-discovery-o
 
 JSON-LD should be incorporated into the landing page html inside the `<head></head>` as a `<script>` element.  
 
-```
+```{code-block} html
 <html>
   <head>
     ...
