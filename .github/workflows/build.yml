@@ -1,7 +1,9 @@
 name: deploy
 
 on:
-  # Trigger the workflow on push to main branch
+  # enable manual workflow trigger
+  workflow_dispatch:
+  # Trigger the workflow on push to branch
   push:
     branches:
       - feature-jupyterbook
@@ -24,7 +26,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
-        pip install -r requirements.txt
+        pip install -r book/soso/requirements.txt
 
     # Build the book
     - name: Build the book
