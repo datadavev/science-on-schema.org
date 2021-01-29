@@ -1,0 +1,807 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getting Started &#8212; Science-On-Schema.org</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Describing a Repository" href="datarepository.html" />
+    <link rel="prev" title="Science On Schema.Org (SOSO) Guidance Documents" href="intro.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Science-On-Schema.org</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Science On Schema.Org (SOSO) Guidance Documents
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Getting Started
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="datarepository.html">
+   Describing a Repository
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dataset.html">
+   Describing a Dataset
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="content.html">
+   Content in Jupyter Book
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="markdown.html">
+     Markdown Files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notebooks.html">
+     Content with notebooks
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/getting_started.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#goals">
+   Goals
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#approach">
+   Approach
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prerequisites">
+   Prerequisites
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-schema-org">
+   Using schema.org
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modifying-web-pages-to-include-schema-org-as-json-ld">
+     Modifying web pages to include schema.org as JSON-LD
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-types">
+     Data Types
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#text">
+       Text
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#number">
+       Number
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#url">
+       URL
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#boolean">
+       Boolean
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#date">
+       Date
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#datetime">
+       DateTime
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#time">
+       Time
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#html">
+       HTML
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resource-types">
+     Resource Types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#time-of-resource-modification">
+   Time of resource modification
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#schema-org-datemodified">
+     1.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       schema.org/dateModified
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#http-last-modified-header">
+     2. HTTP
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Last-Modified
+      </span>
+     </code>
+     Header
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sitemap-xml-lastmod-value">
+     3.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       sitemap.xml
+      </span>
+      <span class="pre">
+       lastmod
+      </span>
+     </code>
+     value
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<p>If you are new to publishing schema.org, here are some general tips to getting started.</p>
+<div class="section" id="goals">
+<h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
+<p>To provide a place for the scientific data community to work out how best to implement <strong>schema.org</strong> and other external vocabularies on web pages by publishing guidance documents. <em><span class="xref myst">Pull requests</span></em> and <em><span class="xref myst">Github Issues</span></em> are welcome!</p>
+</div>
+<div class="section" id="approach">
+<h2>Approach<a class="headerlink" href="#approach" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>To be <strong>pragmatic</strong> with our use of schema.org and external vocabulary adoption.</p></li>
+<li><p>To <strong>consider schema.org classes and properties first</strong> before considering external vocabularies.</p></li>
+<li><p>Use <strong><a class="reference external" href="https://json-ld.org/">JSON-LD</a></strong> in our guidance documents for simplicity and terseness as compared to <em><a class="reference external" href="https://www.w3.org/TR/microdata/">Microdata</a></em> and <em><a class="reference external" href="https://rdfa.info/">RDFa</a></em>. For more, see <a class="reference external" href="/CONVENTIONS.md#why-jsonld">Why JSON-LD?</a> from the <span class="xref myst">Conventions</span> document.</p></li>
+<li><p>Presently, the <a class="reference external" href="https://search.google.com/structured-data/testing-tool/u/0/">Google Structured Data Testing Tool</a> enforces use of <a class="reference external" href="https://schema.org/">schema.org</a> classes and properties by displaying an error whenever external vocabularies are used. schema.org proposes linking to external vocabularies usuing the <a class="reference external" href="https://schema.org/additionalType">schema:additionalType</a> property. While this property is defined as a sub property of <a class="reference external" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a>, it’s data type is a literal. We encourage the use of JSON-LD <code class="docutils literal notranslate"><span class="pre">'&#64;type'</span></code> for typing classes to external vocabularies. For more, see <a class="reference external" href="/CONVENTIONS.md#external-vocab-typing">Typing to External Vocabularies</a> from the <span class="xref myst">Conventions</span> document.</p></li>
+<li><p>See <span class="xref myst">Governance</span> for how we will govern the project.</p></li>
+<li><p>See <span class="xref myst">Conventions</span> for guidance on creating/editing guidance documents.</p></li>
+</ol>
+</div>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>We assume a general understanding of <a class="reference external" href="http://www.json.org/">JSON</a>.</p></li>
+<li><p>We assume a basic knowledge about <a class="reference external" href="https://json-ld.org">JSON-LD</a>.</p></li>
+<li><p>We assume that you’ve heard about <a class="reference external" href="https://schema.org/">schema.org</a> and have already decided that it’s useful to you.</p></li>
+<li><p>We assume that you have a general understanding of what may describe a scientific dataset.</p></li>
+</ol>
+<p>JSON-LD is valid JSON, so standard developer tools that support JSON can be used. For some specific JSON-LD and schema.org help though, there are some other resources.</p>
+<p><strong>JSON-LD resources:</strong> <a class="reference external" href="https://json-ld.org">https://json-ld.org</a></p>
+<p>Generating the JSON-LD is best done via libraries like those you can find at https://json-ld.org.<br />
+There are libraries for; Javascript, Python, PHP, Ruby, Java, C# and Go.  While JSON-LD is just
+JSON and can be generated many ways, these libraries
+can generate valid JSON-LD spec output.</p>
+<p><strong>JSON-LD playground:</strong> <a class="reference external" href="https://json-ld.org/playground/">https://json-ld.org/playground/</a></p>
+<p>The playground is hosted at the very useful <a class="reference external" href="https://json-ld.org">JSON-LD web site</a> site. You
+can explore examples of JSON-LD and view how they convert to RDF, flatten, etc.   Note, that JSON-LD
+is not associated with schema.org.  It can be used for much more and so most examples here don’t
+use schema.org and this site will NOT look to see if you are using schema.org types and properties
+correctly.  Only that your JSON-LD is well formed.</p>
+<p>Let’s go!</p>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>There is an emerging practice to leverage structured metadata to aid in the discovery of web based resources.  Much of this
+work is taking place in the context (no pun intended) of schema.org.  This approach has extended to the resource type Dataset.
+This page will present approaches, tools and references that will aid in the understanding and development of schema.org in
+JSON-LD and its connection to external vocabularies.  For a more thorough presentation on this visit the Google AI Blog entry
+of January 24 2017 at https://ai.googleblog.com/2017/01/facilitating-discovery-of-public.html .</p>
+</div>
+<div class="section" id="using-schema-org">
+<h2>Using schema.org<a class="headerlink" href="#using-schema-org" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="modifying-web-pages-to-include-schema-org-as-json-ld">
+<h3>Modifying web pages to include schema.org as JSON-LD<a class="headerlink" href="#modifying-web-pages-to-include-schema-org-as-json-ld" title="Permalink to this headline">¶</a></h3>
+<p>JSON-LD should be incorporated into the landing page html inside the <code class="docutils literal notranslate"><span class="pre">&lt;head&gt;&lt;/head&gt;</span></code> as a <code class="docutils literal notranslate"><span class="pre">&lt;script&gt;</span></code> element.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    ...
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;schemaorg&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;application/ld+json&quot;</span><span class="p">&gt;</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;@context&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;@vocab&quot;</span><span class="o">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+       <span class="p">},</span>
+       <span class="s2">&quot;@id&quot;</span><span class="o">:</span> <span class="s2">&quot;http://opencoredata.org/id/dataset/bcd15975-680c-47db-a062-ac0bb6e66816&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;@type&quot;</span><span class="o">:</span> <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;Janus Thermal Conductivity for ocean drilling ...&quot;</span><span class="p">,</span>
+       <span class="p">...</span>
+    <span class="p">}</span>
+    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    ...
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  ...
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="data-types">
+<h3>Data Types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h3>
+<p>For each schema.org type, such as Person or Event, there are fields that let you specify more information about that type. Each of these fields has an expected data type that is defined in the documentation as you can see from <a class="reference external" href="#figure-1">Figure 1.</a>.</p>
+<div class="figure align-default" id="markdown-fig">
+<img alt="_images/schemaorg-datatypes.png" src="_images/schemaorg-datatypes.png" />
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text"><strong>schema.org field data types.</strong> The expected data type for each field appears in the middle column. The left column is the name of the field, the middle column is the data type, and the right column is the field’s description.</span><a class="headerlink" href="#markdown-fig" title="Permalink to this image">¶</a></p>
+</div>
+<p>Every data type is either a <em>resource</em> or a <em>literal</em>. Resources refer to other schema.org types. For example a Dataset type has a field called author of which the data type can be either a Person or an Organization. Because Person and Organization are other schema.org “types” who have their own fields, they are called resources. In JSON-LD, you specify resources by using curly brackets <code class="docutils literal notranslate"><span class="pre">{}</span></code>:</p>
+<div class="highlight-json notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
+<span class="hll">  <span class="nt">&quot;author&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll">    <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Person&quot;</span><span class="p">,</span>
+</span><span class="hll">    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Jane Goodall&quot;</span>
+</span><span class="hll">  <span class="p">}</span>
+</span><span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>In the JSON-LD above, the ‘author’ is a resource of type ‘Person’. Fields that simply have a value are called literal data types. For examples, the ‘Person’ type above has a ‘name’ of “Jane Goodall” - a literal text value.</p>
+<p>Schema.org defines six literal, or primitive,  data types: <a class="reference external" href="https://schema.org/Text">Text</a>, <a class="reference external" href="https://schema.org/Number">Number</a>, <a class="reference external" href="https://schema.org/Boolean">Boolean</a>, <a class="reference external" href="https://schema.org/Date">Date</a>, <a class="reference external" href="https://schema.org/DateTime">DateTime</a>, and <a class="reference external" href="https://schema.org/Time">Time</a>. <a class="reference external" href="https://schema.org/Text">Text</a> has two special variations: <a class="reference external" href="https://schema.org/URL">URL</a> and how to specify when text is actually <a class="reference external" href="#data-type_HTML">HTML</a>.</p>
+<p>When using schema.org, literal data types are not not specified using curly brackets <code class="docutils literal notranslate"><span class="pre">{}</span></code> as these are resrved for specifying ‘objects’ or ‘resources’ such as other schema.org types like <code class="docutils literal notranslate"><span class="pre">Person</span></code>, <code class="docutils literal notranslate"><span class="pre">Organization</span></code>, etc. First, let’s see how to use a primitive data type by using fields of <a class="reference external" href="https://schema.org/CreativeWork">CreativeWork</a>, the superclass for <a class="reference external" href="https://schema.org/Dataset">Dataset</a>.</p>
+<div class="section" id="text">
+<h4>Text<a class="headerlink" href="#text" title="Permalink to this headline">¶</a></h4>
+<p>Imagine we want to say the name of our Creative Work is “Passenger Manifest for H.M.S. Titanic”. The <a class="reference external" href="https://schema.org/name">name</a> field of CreativeWork specifies that it expects Text as the data type. We would use it in this way:</p>
+<div class="highlight-json notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+<span class="hll">  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Passenger Manifest for H.M.S. Titanic&quot;</span>
+</span><span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="number">
+<h4>Number<a class="headerlink" href="#number" title="Permalink to this headline">¶</a></h4>
+<p>Let’s say we want to specify the version number of our manifest using the <a class="reference external" href="https://schema.org/version">version</a> field of CreativeWork which expects a Number. To specify numbers in JSON-LD, we omit the quotations surrounding the value:</p>
+<div class="highlight-json notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Passenger Manifest for H.M.S. Titanic&quot;</span><span class="p">,</span>
+<span class="hll">  <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="mi">1</span>
+</span><span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="url">
+<h4>URL<a class="headerlink" href="#url" title="Permalink to this headline">¶</a></h4>
+<p>Now, let’s specify the URL of our manifest using the <a class="reference external" href="https://schema.org/url">url</a> field of CreativeWork, an inheritied field from <a class="reference external" href="https://schema.org/Thing">Thing</a>. This fields expects a valid URL represented as Text:</p>
+<div class="highlight-json notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Passenger Manifest for H.M.S. Titanic&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="hll">  <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://raw.githubusercontent.com/Geoyi/Cleaning-Titanic-Data/master/titanic_original.csv&quot;</span>
+</span><span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="boolean">
+<h4>Boolean<a class="headerlink" href="#boolean" title="Permalink to this headline">¶</a></h4>
+<p>Using the Boolean value, we can speficy that our manifest is accessible for free using the field <a class="reference external" href="https://schema.org/isAccessibleForFree">isAccessibleForFree</a> by using the text <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code> and omitting the quotes:</p>
+<div class="highlight-json notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Passenger Manifest for H.M.S. Titanic&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://raw.githubusercontent.com/Geoyi/Cleaning-Titanic-Data/master/titanic_original.csv&quot;</span><span class="p">,</span>
+<span class="hll">  <span class="nt">&quot;isAccessibleForFree&quot;</span><span class="p">:</span> <span class="kc">true</span>
+</span><span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="date">
+<h4>Date<a class="headerlink" href="#date" title="Permalink to this headline">¶</a></h4>
+<p>To specify the <a class="reference external" href="https://schema.org/datePublished">datePublished</a>, which allows either a Date or DateTime, as a Date, we can use any <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations">ISO 8601 date format</a> by wrapping the date in double-quotes:</p>
+<div class="highlight-json notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Passenger Manifest for H.M.S. Titanic&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://raw.githubusercontent.com/Geoyi/Cleaning-Titanic-Data/master/titanic_original.csv&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;isAccessibleForFree&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+<span class="hll">  <span class="nt">&quot;datePublished&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-07-29&quot;</span>
+</span><span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="datetime">
+<h4>DateTime<a class="headerlink" href="#datetime" title="Permalink to this headline">¶</a></h4>
+<p>To specify the <a class="reference external" href="https://schema.org/dateModified">dateModified</a> as a DateTime, as a Date, we must follow the <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations">ISO 8601  format for combining date and time representations</a> using the form <code class="docutils literal notranslate"><span class="pre">[-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]</span> </code>:</p>
+<div class="highlight-json notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Passenger Manifest for H.M.S. Titanic&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://raw.githubusercontent.com/Geoyi/Cleaning-Titanic-Data/master/titanic_original.csv&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;isAccessibleForFree&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;datePublished&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-07-29&quot;</span><span class="p">,</span>
+<span class="hll">  <span class="nt">&quot;dateModified&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-07-30T14:30Z&quot;</span>
+</span><span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="time">
+<h4>Time<a class="headerlink" href="#time" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://schema.org/Time">Time</a> is a rarely-used data type because it must represent a point in time recurring on multiple days following the <a class="reference external" href="https://www.w3.org/TR/xmlschema-2/#time">XML Schema definition</a> using the form <code class="docutils literal notranslate"><span class="pre">hh:mm:ss[Z|(+|-)hh:mm]</span></code> (see XML schema for details).</p>
+<div class="highlight-json notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Passenger Manifest for H.M.S. Titanic&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://raw.githubusercontent.com/Geoyi/Cleaning-Titanic-Data/master/titanic_original.csv&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;isAccessibleForFree&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;datePublished&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-07-29&quot;</span><span class="p">,</span>
+<span class="hll">  <span class="nt">&quot;dateModified&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-07-30T14:30Z&quot;</span>
+</span><span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="html">
+<h4>HTML<a class="headerlink" href="#html" title="Permalink to this headline">¶</a></h4>
+<p>The HTML data type is a special variation of the <code class="docutils literal notranslate"><span class="pre">Text</span></code> data type. In some cases where <code class="docutils literal notranslate"><span class="pre">Text</span></code> is the expected data type, our actual data type may be HTML (because we are dealing with web pages). In this case, the <a class="reference external" href="https://schema.org/docs/jsonldcontext.json">schema.org JSON-LD context</a> defines <code class="docutils literal notranslate"><span class="pre">HTML</span></code> to mean <a class="reference external" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">rdf:HTML</a>, the data type for specifying that a string of text should be interpreted as HTML. Let’s say that we have a description of our manifest and want to use the <a class="reference external" href="https://schema.org/description">description</a> field, but we have HTML inside that text. Using the text field as we did above for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field, we would specify the <code class="docutils literal notranslate"><span class="pre">description</span></code> as:</p>
+<div class="highlight-json notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Passenger Manifest for H.M.S. Titanic&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://raw.githubusercontent.com/Geoyi/Cleaning-Titanic-Data/master/titanic_original.csv&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;isAccessibleForFree&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;datePublished&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-07-29&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;dateModified&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-07-30T14:30Z&quot;</span><span class="p">,</span>
+<span class="hll">  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&amp;lt;h3&amp;gt;Acquisition&amp;lt;/h3&amp;gt;&amp;lt;p&amp;gt;The data was acquired from an office outside of &amp;lt;a href\&quot;https://en.wikipedia.org/wiki/New_York_City\&quot;&amp;gt;New York City&amp;lt;/a&amp;gt;.&quot;</span>
+</span><span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>However, to specify that the <code class="docutils literal notranslate"><span class="pre">description</span></code> field should be <em>interpreted</em> as HTML, you specify <code class="docutils literal notranslate"><span class="pre">description</span></code> as a resource, setting the <code class="docutils literal notranslate"><span class="pre">&#64;type</span></code> of that resource to “HTML” and placing the HTML string in a JSON-LD property <code class="docutils literal notranslate"><span class="pre">&#64;value</span></code>:</p>
+<div class="highlight-json notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Passenger Manifest for H.M.S. Titanic&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://raw.githubusercontent.com/Geoyi/Cleaning-Titanic-Data/master/titanic_original.csv&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;isAccessibleForFree&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;datePublished&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-07-29&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;dateModified&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-07-30T14:30Z&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="p">{</span> 
+<span class="hll">    <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;HTML&quot;</span><span class="p">,</span> 
+</span><span class="hll">    <span class="nt">&quot;@value&quot;</span><span class="p">:</span> <span class="s2">&quot;&amp;lt;h3&amp;gt;Acquisition&amp;lt;/h3&amp;gt;&amp;lt;p&amp;gt;The data was acquired from an office outside of &amp;lt;a href\&quot;https://en.wikipedia.org/wiki/New_York_City\&quot;&amp;gt;New York City&amp;lt;/a&amp;gt;.&quot;</span>
+</span>  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>NOTE: As of 7/28/2018, the <a class="reference external" href="https://search.google.com/structured-data/testing-tool/u/0/">Google Structured Data Testing Tool</a> understands the value of <code class="docutils literal notranslate"><span class="pre">description</span></code> to be <code class="docutils literal notranslate"><span class="pre">rdf:HTML</span></code>, but the tool specifies this type is unknown. However, you can see from the schema.org Github repository, that this method was discussed and implemented in <a class="reference external" href="https://github.com/schemaorg/schemaorg/pull/1634">pull #1634: alias HTML to rdf:HTML</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="resource-types">
+<h3>Resource Types<a class="headerlink" href="#resource-types" title="Permalink to this headline">¶</a></h3>
+<p>All schema.org resources should make use of the <code class="docutils literal notranslate"><span class="pre">&#64;type</span></code> property which ‘classifies’ the resources as a specific type. For example, an un-typed resource would look like:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;My Dataset&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Even though the above resource has a name of ‘My Dataset’ harvesters are unaware that your <em>intent</em> was to classify it as a Dataset. Un-typed resources are not valid schema.org resources, and so they require the <code class="docutils literal notranslate"><span class="pre">&#64;type</span></code> property:</p>
+<div class="highlight-json notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="hll">  <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
+</span>  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;My Dataset&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>In some cases, it useful to multi-type a resource. One example of this may be a data repository. A data repositotry is typically functioning as noth an ‘Organization’ that employs people and has an address, but it also functions as a ‘Service’ to its user community. To multi-type a resource, we use JSON arrays:</p>
+<div class="highlight-json notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="hll">  <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Organization&quot;</span><span class="p">,</span> <span class="s2">&quot;Service&quot;</span><span class="p">],</span>
+</span>  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;My Data Repository&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All <a class="reference external" href="https://schema.org/docs/full.html">schema.org types may be found here</a>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="time-of-resource-modification">
+<h2>Time of resource modification<a class="headerlink" href="#time-of-resource-modification" title="Permalink to this headline">¶</a></h2>
+<p>An indication of when a resource was modified is valuable to a consumer for a variety of reasons.</p>
+<p>A consumer tracking changes in a collection of <code class="docutils literal notranslate"><span class="pre">SO:Dataset</span></code> or similar resources being advertised
+with a <code class="docutils literal notranslate"><span class="pre">sitemap.xml</span></code> or similar mechanism has at least three timestamps that can be examined to
+determine if an already retrieved resource may have been modified: the <code class="docutils literal notranslate"><span class="pre">schema.org/dateModified</span></code>
+property in the JSON-LD, the <code class="docutils literal notranslate"><span class="pre">Last-Modified</span></code> time reported by the web server, and the <code class="docutils literal notranslate"><span class="pre">&lt;lastmod&gt;</span></code>
+time that may be reported in a <code class="docutils literal notranslate"><span class="pre">sitemap.xml</span></code> document.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">schema.org/dateModified</span></code> value should be considered authoritative for indicating when the
+resource was modified. The <code class="docutils literal notranslate"><span class="pre">Last-Modified</span></code> header should reflect the corresponding
+<code class="docutils literal notranslate"><span class="pre">schema.org/dateModified</span></code> entry. This property provides an important hint for consumers as to
+whether a cached copy of a resource should be updated for example. Similarly the <code class="docutils literal notranslate"><span class="pre">&lt;lastmod&gt;</span></code>
+entry should reflect the <code class="docutils literal notranslate"><span class="pre">Last-Modified</span></code> header and the <code class="docutils literal notranslate"><span class="pre">schema.org/dateModified</span></code> value.</p>
+<p>A typical pattern for a consumer interesting in synchronizing a cache of resource is:</p>
+<ol class="simple">
+<li><p>Examine the sitemap for new or updated entries using hints from <code class="docutils literal notranslate"><span class="pre">&lt;lastmod&gt;</span></code></p></li>
+<li><p>Retrieve the resource directly or by previewing with a HTTP HEAD request. A
+<code class="docutils literal notranslate"><span class="pre">Last-Modified</span></code> provides a hint as to whether the resource should be retrieved.</p></li>
+<li><p>Examine the <code class="docutils literal notranslate"><span class="pre">schema.org/dateModified</span></code> property of the resource(s) extracted from the
+resource.</p></li>
+</ol>
+<p>Providing accurate hints early in the process can reduce requirements for effectively
+sharing data resources.</p>
+<div class="section" id="schema-org-datemodified">
+<h3>1. <code class="docutils literal notranslate"><span class="pre">schema.org/dateModified</span></code><a class="headerlink" href="#schema-org-datemodified" title="Permalink to this headline">¶</a></h3>
+<p>Each <code class="docutils literal notranslate"><span class="pre">schema.org</span></code> instance derived from <a class="reference external" href="https://schema.org/CreativeWork"><code class="docutils literal notranslate"><span class="pre">schema.org/CreativeWork</span></code></a>
+may have a <a class="reference external" href="https://schema.org/dateModified"><code class="docutils literal notranslate"><span class="pre">dateModified</span></code></a> property to indicate “The date on which
+the CreativeWork was most recently modified or when the item’s entry was modified within a DataFeed.”
+This property should be provided with any instance of <code class="docutils literal notranslate"><span class="pre">schema.org/Dataset</span></code> or any other <code class="docutils literal notranslate"><span class="pre">schema.org</span></code>
+entity published in a landing page or though other mechanisms. The JSON spec does not include a
+built-in type for date time values, however the general consensus and a sensible practices is to
+represent a date time value as a time zone aware ISO 8601 formatted string. For example:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;dateModified&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-12-10T13:45:00.000Z&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="http-last-modified-header">
+<h3>2. HTTP <code class="docutils literal notranslate"><span class="pre">Last-Modified</span></code> Header<a class="headerlink" href="#http-last-modified-header" title="Permalink to this headline">¶</a></h3>
+<p>A schema.org instance is typically embedded in a landing page or may be accessed directly as a
+JSON-LD document over the HTTP protocol. HTTP resource providers (i.e. web servers) may include
+a <a class="reference external" href="https://tools.ietf.org/html/rfc7232#section-2.2"><code class="docutils literal notranslate"><span class="pre">Last-Modified</span></code> header</a> which contains the
+date and time at which the origin server believes the resource was last modified. The format for
+the date value follows the <a class="reference external" href="https://tools.ietf.org/html/rfc2616">RFC 2616 specification</a>. For
+example:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Last-Modified: Mon, 10 Dec 2018 13:45:00 GMT
+</pre></div>
+</div>
+</div>
+<div class="section" id="sitemap-xml-lastmod-value">
+<h3>3. <code class="docutils literal notranslate"><span class="pre">sitemap.xml</span> <span class="pre">lastmod</span></code> value<a class="headerlink" href="#sitemap-xml-lastmod-value" title="Permalink to this headline">¶</a></h3>
+<p>A <a class="reference external" href="https://www.sitemaps.org/protocol.html"><code class="docutils literal notranslate"><span class="pre">sitemap.xml</span></code></a> document provides a mechanism for a
+resource server to advertise available resources. Each <code class="docutils literal notranslate"><span class="pre">&lt;url&gt;</span></code> element may include a <code class="docutils literal notranslate"><span class="pre">&lt;lastmod&gt;</span></code>
+tag to indicate when the resource identified by the <code class="docutils literal notranslate"><span class="pre">&lt;url&gt;/&lt;loc&gt;</span></code> was last modified. The
+specification is fairly loose, indicating that date in the
+<a class="reference external" href="https://www.w3.org/TR/NOTE-datetime">W3C Datetime</a> format of <code class="docutils literal notranslate"><span class="pre">YYYY-MM-DD</span></code> may be
+sufficient. However, for the purposes of content synchronization, a higher precision is
+desireable, and should be provided where possible. For example:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>2018-12-10T13:45:00.000Z
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">Science On Schema.Org (SOSO) Guidance Documents</a>
+    <a class='right-next' id="next-link" href="datarepository.html" title="next page">Describing a Repository</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By ESIPFed<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
