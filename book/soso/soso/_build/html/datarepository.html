@@ -1,0 +1,737 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Describing a Repository &#8212; Science-On-Schema.org</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Describing a Dataset" href="dataset.html" />
+    <link rel="prev" title="Getting Started" href="getting_started.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Science-On-Schema.org</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Science On Schema.Org (SOSO) Guidance Documents
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="getting_started.html">
+   Getting Started
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Describing a Repository
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dataset.html">
+   Describing a Dataset
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="content.html">
+   Content in Jupyter Book
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="markdown.html">
+     Markdown Files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notebooks.html">
+     Content with notebooks
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/datarepository.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Describing a Repository
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#describing-a-repository-s-identifier">
+     Describing a Repository’s Identifier
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#describing-a-repository-s-funding-source">
+     Describing a Repository’s Funding Source
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#describing-a-repository-s-services">
+     Describing a Repository’s Services
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#describing-a-repository-s-data-collections">
+     Describing a Repository’s Data Collections
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#advanced-publishing-techniques">
+     Advanced Publishing Techniques
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#how-to-publish-resources-for-the-categories-disciplines-at-repository-services">
+       How to publish resources for the categories/disciplines at repository services.
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#how-to-use-external-vocabularies">
+       &amp; How to use external vocabularies
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p><a id="top"></a>
+<span class="xref myst">Home</span> | DataRepository</p>
+<div class="section" id="describing-a-repository">
+<h1>Describing a Repository<a class="headerlink" href="#describing-a-repository" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="#basic-fields">Basic Fields</a></p></li>
+<li><p><a class="reference external" href="#identifier">Identifier</a></p></li>
+<li><p><a class="reference external" href="#funding-source">Funding Source</a></p></li>
+<li><p><a class="reference external" href="#services">Services</a></p></li>
+<li><p><a class="reference external" href="#data-collections">Data Collections</a></p></li>
+<li><p><a class="reference external" href="#advanced-publishing">Advanced Publishing Techniques</a></p>
+<ul>
+<li><p><a class="reference external" href="#advanced-publishing-category">How to use external vocabularies</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="id1">
+<h2>Describing a Repository<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p><span class="xref myst"><img alt="Repository  - Overview" src="_images/repository-overview.svg" /></span></p>
+<p>In schema.org, we model a repository as both an <a class="reference external" href="https://schema.org/ResearchProject">schema:ResearchProject</a>, a sub-class of an Organization, and a <a class="reference external" href="https://schema.org/Service">schema:Service</a>. This double-typing gives us the most flexibility in describing the characteristics of the organization providing the service and the services offered by the organization.</p>
+<pre>
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  <strong>"@type": ["Service", "ResearchProject"],
+  "legalName": "Sample Data Repository Office",
+  "name": "SDRO"
+  </strong>
+}
+</pre>
+<p><a id="basic-fields"></a>
+The other fields you can use to describe the Organziation and the Service are:</p>
+<p><span class="xref myst"><img alt="Repository  - Basic Fields" src="_images/repository_basic-fields.svg" /></span></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://schema.org/legalName">schema:legalName</a> should be the official name of the  repository,</p></li>
+<li><p><a class="reference external" href="https://schema.org/name">schema:name</a> can be an acronym or the name typcially used for the repository,</p></li>
+<li><p><a class="reference external" href="https://schema.org/url">schema:url</a> should be the url of your repository’s homepage,</p></li>
+<li><p><a class="reference external" href="https://schema.org/description">schema:description</a> should be text describing your repository,</p></li>
+<li><p><a class="reference external" href="https://schema.org/sameAs">schema:sameAs</a> can be used to link the repository to other URLs such as Re3Data, Twitter, LinkedIn, etc.,</p></li>
+<li><p><a class="reference external" href="https://schema.org/category">schema:category</a> can be used to describe the discipline, domain, area of study that encompasses the repository’s holdings.</p></li>
+</ul>
+<pre>
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": ["Service", "ResearchProject"],
+  "legalName": "Sample Data Repository Office",
+  "name": "SDRO",
+  <strong>"url": "https://www.sample-data-repository.org",
+  "description": "The Sample Data Repository Service provides access to data from an imaginary domain accessible from this website.",
+  "sameAs": [
+        "http://www.re3data.org/repository/r3d1000000xx",
+        "https://twitter.com/SDRO",
+        "https://www.linkedin.com/company/123456789/"
+    ],
+  "category": [
+    "Biological Oceanography",
+    "Chemical Oceanography"
+  ]</strong>
+}
+</pre>
+<p>(See <a class="reference external" href="#advanced-publishing">advanced publishing techniques</a> for how to <a class="reference external" href="#advanced-publishing-category">describe categories/disciplines in more detail</a> than just simple text.)</p>
+<p>If you are using the “&#64;id” attribute for your Repository, and the provider of the repository’s services is the same Organziation, you can specify the <a class="reference external" href="https://schema.org/provider">schema:provider</a>  of the <a class="reference external" href="https://schema.org/Service">schema:Service</a> in this way:</p>
+<pre>
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": ["Service", "ResearchProject"],
+  <strong>"@id": "https://www.sample-data-repository.org",</strong>
+  "legalName": "Sample Data Repository Office",
+  "name": "SDRO",
+  "url": "https://www.sample-data-repository.org",
+  "description": "The Sample Data Repository Service provides access to data from an imaginary domain accessible from this website.",
+  "category": [
+    "Biological Oceanography",
+    "Chemical Oceanography"
+  ],
+  <strong>"provider": {
+    "@id": "https://www.sample-data-repository.org"
+  }</strong>
+}
+</pre>
+<p>However, if your repository has a situation where multiple organizations act as the provider or you want to recognize a different organization as the provider of the repository’s service, <a class="reference external" href="https://schema.org/provider">schema:provider</a> can be used in this way:</p>
+<pre>
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": ["Service", "ResearchProject"],
+  "legalName": "Sample Data Repository Office",
+  "name": "SDRO",
+  "url": "https://www.sample-data-repository.org",
+  "description": "The Sample Data Repository Service provides access to data from an imaginary domain accessible from this website.",
+  "category": [
+    "Biological Oceanography",
+    "Chemical Oceanography"
+  ],
+  <strong>"provider": [
+    {
+      "@type": "ResearchProject",
+      "name": "SDRO Technical Office",
+      "description": "We provide all the infrastructure for the SDRO"
+      ...
+    },
+    {
+      "@type": "ResearchProject",
+      "name": "SDRO Science Support Office",
+      "description": "We provide all the science support functionality for the SDRO"
+      ...
+    }
+  ]</strong>
+}
+</pre>
+<p>Adding additional fields of <a class="reference external" href="https://schema.org/ResearchProject">schema:ResearchProject</a>:</p>
+<pre>
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": ["Service", "ResearchProject"],
+  "legalName": "Sample Data Repository Office",
+  "name": "SDRO",
+  "url": "https://www.sample-data-repository.org",
+  "description": "The Sample Data Repository Service provides access to data from an imaginary domain accessible from this website.",
+  "category": [
+    "Biological Oceanography",
+    "Chemical Oceanography"
+  ],
+  "provider": {
+    "@id": "https://www.sample-data-repository.org"
+  }
+  <strong>"logo": {
+    "@type": "ImageObject",
+    "url": "https://www.sample-data-repository.org/images/logo.jpg"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "name": "Support",
+    "email": "info@bco-dmo.org",
+    "url": "https://www.sample-data-repository.org/about-us",
+    "contactType": "customer support"
+  },
+  "foundingDate": "2006-09-01",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Main St.",
+    "addressLocality": "Anytown",
+    "addressRegion": "ST",
+    "postalCode": "12345",
+    "addressCountry": "USA"
+  }</strong>
+}
+</pre>
+<p>If this ResearchProject, or Organization, has a parent entity such as a college, university or research center, that information can be provided using the <a class="reference external" href="https://schema.org/parentOrganization">schema:parentOrganization</a> property:</p>
+<pre>
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": ["Service", "ResearchProject"],
+  "legalName": "Sample Data Repository Office",
+  "name": "SDRO",
+  "url": "https://www.sample-data-repository.org",
+  "description": "The Sample Data Repository Service provides access to data from an imaginary domain accessible from this website.",
+  "category": [
+    "Biological Oceanography",
+    "Chemical Oceanography"
+  ],
+  "provider": {
+    "@id": "https://www.sample-data-repository.org"
+  },
+   <strong>"parentOrganization": {
+     "@type": "Organization",
+     "@id": "http://www.someinstitute.edu",
+     "legalName": "Some Institute",
+     "name": "SI",
+     "url": "http://www.someinstitute.edu",
+     "address": {
+       "@type": "PostalAddress",
+       "streetAddress": "234 Main St.",
+       "addressLocality": "Anytown",
+       "addressRegion": "ST",
+       "postalCode": "12345",
+       "addressCountry": "USA"
+     }
+   }</strong>
+  }
+}
+</pre>
+<p>Back to <a class="reference external" href="#top">top</a></p>
+<p><a id="identifier"></a></p>
+<div class="section" id="describing-a-repository-s-identifier">
+<h3>Describing a Repository’s Identifier<a class="headerlink" href="#describing-a-repository-s-identifier" title="Permalink to this headline">¶</a></h3>
+<p><span class="xref myst"><img alt="Repository - Identifier" src="_images/repository_identifier.svg" /></span></p>
+<p>Some organizations may have a persistent identifier (DOI) assigned to their organization from authorities like the Registry of Research Data Repositories (re3data.org). The way to describe these organizational identifiers is to use the <a class="reference external" href="https://schema.org/identifier">schema:identifier</a> property in this way:</p>
+<pre>
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": ["Service", "ResearchProject"],
+  "legalName": "Sample Data Repository Office",
+  "name": "SDRO",
+  "url": "https://www.sample-data-repository.org",
+  "description": "The Sample Data Repository Service provides access to data from an imaginary domain accessible from this website.",
+  "category": [
+    "Biological Oceanography",
+    "Chemical Oceanography"
+  ],
+  "provider": {
+    "@id": "https://www.sample-data-repository.org"
+  },
+  <strong>"identifier": {
+    "@type": "PropertyValue",
+    "name": "Re3data DOI: 10.17616/R37P4C",
+    "propertyID": "https://registry.identifiers.org/registry/doi",
+    "value": "doi:10.17616/R37P4C",
+    "url": "https://doi.org/10.17616/R37P4C"
+  }</strong>
+}
+</pre>
+<p>For more information on describing identifiers, see the <a class="reference external" href="/guides/Dataset.md#identifier">Dataset - Identifier guide</a>.</p>
+<p><a id="funding-source"></a></p>
+</div>
+<div class="section" id="describing-a-repository-s-funding-source">
+<h3>Describing a Repository’s Funding Source<a class="headerlink" href="#describing-a-repository-s-funding-source" title="Permalink to this headline">¶</a></h3>
+<p><span class="xref myst"><img alt="Repository - Funding" src="_images/repository_funding.svg" /></span></p>
+<p>To describe the funding source of a repository, you use the <a class="reference external" href="https://schema.org/funder">schema:funder</a> property of <a class="reference external" href="https://schema.org/Organization">schema:Organization</a>:</p>
+<pre>
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": ["Service", "ResearchProject"],
+  "legalName": "Sample Data Repository Office",
+  "name": "SDRO",
+  "url": "https://www.sample-data-repository.org",
+  "description": "The Sample Data Repository Service provides access to data from an imaginary domain accessible from this website.",
+  "category": [
+    "Biological Oceanography",
+    "Chemical Oceanography"
+  ],
+  "provider": {
+    "@id": "https://www.sample-data-repository.org"
+  },
+   "parentOrganization": {
+     "@type": "Organization",
+     "@id": "http://www.someinstitute.edu",
+     "legalName": "Some Institute",
+     "name": "SI",
+     "url": "http://www.someinstitute.edu",
+     "address": {
+       "@type": "PostalAddress",
+       "streetAddress": "234 Main St.",
+       "addressLocality": "Anytown",
+       "addressRegion": "ST",
+       "postalCode": "12345",
+       "addressCountry": "USA"
+     },
+     <strong>"funder": {
+      "@type": "Organization",
+      "@id": "https://doi.org/10.13039/100000141",
+      "legalName": "Division of Ocean Sciences",
+      "alternateName": "OCE",
+      "url": "https://www.nsf.gov/div/index.jsp?div=OCE",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "https://registry.identifiers.org/registry/doi",
+        "value": "doi:10.13039/100000141",
+        "url": "https://doi.org/10.13039/100000141"
+      },
+      "parentOrganization": {
+        "@type": "Organization",
+        "@id": "http://doi.org/10.13039/100000085",
+        "legalName": "Directorate for Geosciences",
+        "alternateName": "NSF-GEO",
+        "url": "http://www.nsf.gov",
+        "identifier": {
+          "@type": "PropertyValue",
+          "propertyID": "https://registry.identifiers.org/registry/doi",
+          "value": "doi:10.13039/100000085",
+          "url": "https://doi.org/10.13039/100000085"
+         },
+        "parentOrganization": {
+          "@type": "Organization",
+          "@id": "http://dx.doi.org/10.13039/100000001",
+          "legalName": "National Science Foundation",
+          "alternateName": "NSF",
+          "url": "http://www.nsf.gov",
+          "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "https://registry.identifiers.org/registry/doi",
+            "value": "doi:10.13039/100000001",
+            "url": "https://doi.org/10.13039/100000001"
+          }
+        }
+      }</strong>
+    }
+  }
+}
+</pre>
+<p>Back to <a class="reference external" href="#top">top</a></p>
+<p><a id="services"></a></p>
+</div>
+<div class="section" id="describing-a-repository-s-services">
+<h3>Describing a Repository’s Services<a class="headerlink" href="#describing-a-repository-s-services" title="Permalink to this headline">¶</a></h3>
+<p><span class="xref myst"><img alt="Repository - Services" src="_images/repository_services.svg" /></span></p>
+<p>For repositories might offer services for accessing data as opposed to directly accessing data files. The <a class="reference external" href="https://schema.org/Service">schema:Service</a> allows us to describe these services as well as repository searches, data submission services, and syndication services. In this first example, we describe a search service at the repository using <a class="reference external" href="https://schema.org/ServiceChannel">schema:ServiceChannel</a>.</p>
+<pre>
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": ["Service", "ResearchProject"],
+  "legalName": "Sample Data Repository Office",
+  "name": "SDRO",
+  "url": "https://www.sample-data-repository.org",
+  ...
+  <strong>"availableChannel": [
+    {
+      "@type": "ServiceChannel",
+      "serviceUrl": "https://www.sample-data-repository.org/search",
+      "providesService": {
+        "@type": "Service",
+        "name": "SDRO Website Search",
+        "description": "Search for webpages, datasets, authors, funding awards, instrumentation and measurements",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.sample-data-repository.org/search?keywords={query_string}",
+          "query-input": {
+            "@type": "PropertyValueSpecification",
+            "valueRequired": true,
+            "valueName": "query_string"
+          }
+        }
+      }
+    }</strong>
+  ]
+}
+</pre>
+<p>By specifying the <a class="reference external" href="https://schema.org/potentialAction">schema:potentialAction</a>, we create a machine-actionable way to execute searches.</p>
+<p>Back to <a class="reference external" href="#top">top</a></p>
+<p><a id="data-collections"></a></p>
+</div>
+<div class="section" id="describing-a-repository-s-data-collections">
+<h3>Describing a Repository’s Data Collections<a class="headerlink" href="#describing-a-repository-s-data-collections" title="Permalink to this headline">¶</a></h3>
+<p>If your repository has a concept of a data collection, some grouping of a number of datasets, we can use the <a class="reference external" href="https://schema.org/DataCatalog">schema:DataCatalog</a> to describe these collections using the <a class="reference external" href="https://schema.org/OfferCatalog">schema:OfferCatalog</a>. One exampel of a DataCatalog might be to group datasets by a categorization such as ‘biological data’ or ‘chemical data’. Or a catalog could be grouped by instrument, parameter or whatever logical grouping a repository may have.</p>
+<p><span class="xref myst"><img alt="Repository - Offer Catalog" src="_images/repository_offer-catalog.svg" /></span></p>
+<pre>
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": ["Service", "ResearchProject"],
+  "legalName": "Sample Data Repository Office",
+  "name": "SDRO",
+  "url": "https://www.sample-data-repository.org",
+  ...
+  <strong>"hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Sample Data Repository Resource Catalog",
+    "itemListElement": [
+      {
+       "@type": "DataCatalog",
+        "@id": "https://www.sample-data-repository.org/collection/biological-data",
+        "name": "Biological Data",
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "public",
+          "name": "General Public"
+        }
+      },
+      {
+        "@type": "DataCatalog",
+        "@id": "https://www.sample-data-repository.org/collection/geological-data",
+        "name": "Geological Data",
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "public",
+          "name": "General Public"
+        }
+      }
+    ]
+  }</strong>
+}
+</pre>
+<p>Back to <a class="reference external" href="#top">top</a></p>
+<p><a id="advanced-publishing"></a></p>
+</div>
+<div class="section" id="advanced-publishing-techniques">
+<h3>Advanced Publishing Techniques<a class="headerlink" href="#advanced-publishing-techniques" title="Permalink to this headline">¶</a></h3>
+<p><a id="advanced-publishing-category"></a></p>
+<div class="section" id="how-to-publish-resources-for-the-categories-disciplines-at-repository-services">
+<h4>How to publish resources for the categories/disciplines at repository services.<a class="headerlink" href="#how-to-publish-resources-for-the-categories-disciplines-at-repository-services" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="how-to-use-external-vocabularies">
+<h4>&amp; How to use external vocabularies<a class="headerlink" href="#how-to-use-external-vocabularies" title="Permalink to this headline">¶</a></h4>
+<p>The SWEET ontology defines a number of science disciplines and a repository could reference those, or another vocabuary’s resources, by adding the vocabular to the <code class="docutils literal notranslate"><span class="pre">&#64;context</span></code> attribute of the JSON-LD markup.</p>
+<pre>
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    <strong>"sweet-rel": "http://sweetontology.net/rela/",
+    "sweet-kd": "http://sweetontology.net/humanKnowledgeDomain/"</strong>
+  },
+  "@type": ["Service", "ResearchProject"],
+  "legalName": "Sample Data Repository Office",
+  "name": "SDRO",
+  "url": "https://www.sample-data-repository.org",
+  "description": "The Sample Data Repository Service provides access to data from an imaginary domain accessible from this website.",
+  <strong>"sweet-rel:hasRealm": [
+    { "@id": "sweet-kd:Biogeochemistry" },
+    { "@id": "sweet-kd:Oceanography" }
+  ]
+  </strong>
+}
+</pre>
+<p>Back to <a class="reference external" href="#top">top</a></p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="getting_started.html" title="previous page">Getting Started</a>
+    <a class='right-next' id="next-link" href="dataset.html" title="next page">Describing a Dataset</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By ESIPFed<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
